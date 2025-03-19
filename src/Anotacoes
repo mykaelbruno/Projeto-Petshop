@@ -1,0 +1,27 @@
+//OFFTOPIC Wappapper montanha escura
+
+Quando a gente programa com herança, programamos apenas as diferenças, em cima o que se repete deixamos em cima (na hierarquia) e abaixo vamos adicionando as diferenças
+
+Lado bom: Polimorfimo++, classes padronizadas e reuso de código
+Lado ruim: Alto acoplamento, mudar a classe mãe muda todo o resto junto, podendo causar erros
+
+Hierarquia das classes:
+    Quadrilatero <<abstract>>
+        ^
+    Retangulo | Losango | Paralelogramo | Trapezio
+        ^
+    Quadrado
+
+>>Evite usar métodos públicos nos contrutores
+
+O complilador vai subindo na hierarquia buscando o método que foi chamado, sempre de baixo pra cima, executando assim que achar.
+
+-> No diagrama de classes (IML), o símbolo de seta com triângulo branco com contínua é sobre herança de classes (poltilhado é sobre interfaces)
+
+uma classe abstrata, não pode ser instanciada (não posso criar um objeto dela)
+se a classe tem um método abstract, ela também é abstrata
+
+Métodos static = métodos que rodam direto na classe, não precisam instanciar um objeto
+    ^Collenctions.sort(); roda direto em Collections, diferente de um Scanner, por exemplo: Scanner sc = new scanner(); // sc.nextInt();
+
+Herança, composição e coesão

@@ -1,0 +1,53 @@
+
+<<Coisa>> = Se chama esteriótipo
+
+    Se não souber fazer enum, armazena como uma string
+
+▶  ServicosPetShop <<abstract>> (classe mãe)
+        -data: LocalDate;
+        -código: Int;
+        -tamanho: projetoPetphop.ServicosPetShop.Tamanho (isso vai ser um enum);
+
+        +servicoPetShop(codigo: int, tamanho: projetoPetphop.ServicosPetShop.Tamanho)
+        //métodos abstract vc tem que reescrever na classe filha
+        +abstract calculaPreco() : double
+        +abstract descricao() : String
+        +toString, equals, hashcode
+    ▲▲▲▲▲▲ (classes filhas)
+    | Banho
+         -tamamnhoPelo: TamanhoPelo (pode ser um Enum)
+
+         +Banho (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho, tamanhoPelo : TamanhoPelo)
+            | Usa o super para instanciar um objeto da classe mãe passando os dois parâmetros
+         +calculaPreco() : double
+         +descricao() : String
+         +toString, equals, hashcode
+    | Hotelzinho
+        -quantidadeDeHoras: int
+
+        +Hotel (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho, quantidadeDeHoras : int)
+        +calculaPreco() : double
+        +descricao() : String
+        +toString, equals, hashcode
+    | Tosa
+        +Tosa (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho)
+        +calculaPreco() : double
+        +descricao() : String
+        //Não precisa do toString ? Não, pois não tem nenhum atributo a mais que a classe mãe
+
+    InventarioPetShop
+        -servicos: List<ServicosPetShop>
+
+        +adicionaServico(serivico: ServicosPetShop)
+        +calculaValorServico() : double
+        +listaServico() : String
+
+    ServicosPetShopIF
+    <<interface>>
+        +calculaPreco()
+        +descricao()
+        //Caso
+
+
+
+Relatório de todos os serviçoes realizados com seus preços dos preços e do total que recebi com os serviçoes
