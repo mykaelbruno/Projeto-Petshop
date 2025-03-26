@@ -1,7 +1,5 @@
 package projetoPetphop;
 
 public enum Tamanho {
-    PEQUENO,
-    MEDIO,
-    GRANDE
+    PEQUENO, MEDIO, GRANDE
 }
