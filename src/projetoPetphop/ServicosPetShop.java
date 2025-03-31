@@ -2,7 +2,7 @@ package projetoPetphop;
 
 import java.time.LocalDate;
 
-public abstract class ServicosPetShop {
+public abstract class ServicosPetShop implements ServicoPetshopIF{
     private LocalDate data;
     private int codigo;
     private Tamanho tamanhoAnimal;

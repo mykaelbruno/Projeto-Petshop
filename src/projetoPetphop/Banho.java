@@ -12,42 +12,36 @@ public class Banho extends ServicosPetShop {
 
     @Override
     public double calculaPreco() {
-        if (super.getTamanhoAnimal() == Tamanho.PEQUENO) {
-            if (tamanhoPelo == TamanhoPelo.CURTO) {
-                return 50.00;
-            } else if (tamanhoPelo == TamanhoPelo.MEDIO) {
-                return 50.00 + 15.00;
-            } else if (tamanhoPelo == TamanhoPelo.LONGO) {
-                return 50.00 + 25.00;
-            }
-        } else if (super.getTamanhoAnimal() == Tamanho.MEDIO) {
-            if (tamanhoPelo == TamanhoPelo.CURTO) {
-                return 60.00;
-            } else if (tamanhoPelo == TamanhoPelo.MEDIO) {
-                return 60.00 + 15.00;
-            } else if (tamanhoPelo == TamanhoPelo.LONGO) {
-                return 60.00 + 25.00;
-            }
-        } else if (super.getTamanhoAnimal() == Tamanho.GRANDE) {
-            if (tamanhoPelo == TamanhoPelo.CURTO) {
-                return 70.00;
-            } else if (tamanhoPelo == TamanhoPelo.MEDIO) {
-                return 70.00 + 15.00;
-            } else if (tamanhoPelo == TamanhoPelo.LONGO) {
-                return 70.00 + 25.00;
-            }
-        }
-        return 0;
+        return switch (tamanhoPelo) {
+            case CURTO -> precoPorTamanho();
+            case MEDIO -> precoPorTamanho() + 15.00;
+            case LONGO -> precoPorTamanho() + 25.00;
+        };
+    }
+
+    private Double precoPorTamanho() {
+        return switch (super.getTamanhoAnimal()) {
+            case PEQUENO -> 50.00;
+            case MEDIO -> 60.00;
+            case GRANDE -> 70.00;
+        };
     }
 
     public String descricao() {
-        return super.getData() + " | Serviço de banho - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " com pelos " + tamanhoPelo + " - R$: " + calculaPreco();
+        return super.getData() + " | Serviço de Banho - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " com pelos " + tamanhoPelo + " - R$: " + calculaPreco();
     }
 
     @Override
     public String toString() {
-        return "Banho | \nTamanho do animal:" + super.getTamanhoAnimal() + " de pelos: " + tamanhoPelo+ "\n No dia: " + super.getData() + "\n" + "Código: " + super.getCodigo();
+        return "Banho{" +
+                "tamanhoPelo=" + tamanhoPelo +
+                '}';
     }
+
+    /*@Override
+    public String toString() {
+        return "Banho | \nTamanho do animal:" + super.getTamanhoAnimal() + " Pelos: " + tamanhoPelo + "\n No dia: " + super.getData() + "\n" + "Código: " + super.getCodigo();
+    }*/
 
     @Override
     public boolean equals(Object o) {
