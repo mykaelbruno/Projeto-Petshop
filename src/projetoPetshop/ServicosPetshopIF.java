@@ -1,6 +1,6 @@
-package projetoPetphop;
+package projetoPetshop;
 
-public interface ServicoPetshopIF {
+public interface ServicosPetshopIF {
     public double calculaPreco();
     public String descricao();
 }

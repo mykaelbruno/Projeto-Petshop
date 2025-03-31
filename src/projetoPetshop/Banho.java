@@ -1,8 +1,8 @@
-package projetoPetphop;
+package projetoPetshop;
 
 import java.util.Objects;
 
-public class Banho extends ServicosPetShop {
+public class Banho extends ServicosPetshop {
     private TamanhoPelo tamanhoPelo;
 
     public Banho(int codigo, Tamanho tamanhoAnimal, TamanhoPelo tamanhoPelo) {
@@ -28,7 +28,7 @@ public class Banho extends ServicosPetShop {
     }
 
     public String descricao() {
-        return super.getData() + " | Serviço de Banho - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " com pelos " + tamanhoPelo + " - R$: " + calculaPreco();
+        return super.getData() + " | Banho - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " com pelos " + tamanhoPelo + " - R$: " + calculaPreco();
     }
 
     @Override

@@ -6,9 +6,9 @@
 ▶  ServicosPetShop <<abstract>> (classe mãe)
         -data: LocalDate;
         -código: Int;
-        -tamanho: projetoPetphop.ServicosPetShop.Tamanho (isso vai ser um enum);
+        -tamanho: projetoPetshop.ServicosPetshop.Tamanho (isso vai ser um enum);
 
-        +servicoPetShop(codigo: int, tamanho: projetoPetphop.ServicosPetShop.Tamanho)
+        +servicoPetShop(codigo: int, tamanho: projetoPetshop.ServicosPetshop.Tamanho)
         //métodos abstract vc tem que reescrever na classe filha
         +abstract calculaPreco() : double
         +abstract descricao() : String
@@ -17,7 +17,7 @@
     | Banho
          -tamamnhoPelo: TamanhoPelo (pode ser um Enum)
 
-         +Banho (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho, tamanhoPelo : TamanhoPelo)
+         +Banho (codigo: Int, tamanho: projetoPetshop.ServicosPetshop.Tamanho, tamanhoPelo : TamanhoPelo)
             | Usa o super para instanciar um objeto da classe mãe passando os dois parâmetros
          +calculaPreco() : double
          +descricao() : String
@@ -25,12 +25,12 @@
     | Hotelzinho
         -quantidadeDeHoras: int
 
-        +Hotel (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho, quantidadeDeHoras : int)
+        +Hotel (codigo: Int, tamanho: projetoPetshop.ServicosPetshop.Tamanho, quantidadeDeHoras : int)
         +calculaPreco() : double
         +descricao() : String
         +toString, equals, hashcode
     | Tosa
-        +Tosa (codigo: Int, tamanho: projetoPetphop.ServicosPetShop.Tamanho)
+        +Tosa (codigo: Int, tamanho: projetoPetshop.ServicosPetshop.Tamanho)
         +calculaPreco() : double
         +descricao() : String
         //Não precisa do toString ? Não, pois não tem nenhum atributo a mais que a classe mãe

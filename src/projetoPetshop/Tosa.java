@@ -1,6 +1,6 @@
-package projetoPetphop;
+package projetoPetshop;
 
-public class Tosa extends ServicosPetShop{
+public class Tosa extends ServicosPetshop {
     private final double PRECO_PEQUENO = 30.00;
     private final double PRECO_MEDIO = 40.00;
     private final double PRECO_GRANDE = 50.00;
@@ -18,7 +18,7 @@ public class Tosa extends ServicosPetShop{
     }
 
     public String descricao() {
-        return super.getData() + " | Serviço de Tosa - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + "  - R$: " + calculaPreco();
+        return super.getData() + " | Tosa - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + "  - R$: " + calculaPreco();
     }
 
     //o que deveria ter no toString dele, já que não tem nada (nenhum atributo) dentro dele ? e como funcionariam o equals e hashcade ?

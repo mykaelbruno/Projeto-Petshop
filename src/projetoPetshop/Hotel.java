@@ -1,8 +1,8 @@
-package projetoPetphop;
+package projetoPetshop;
 
 import java.util.Objects;
 
-public class Hotel extends ServicosPetShop{
+public class Hotel extends ServicosPetshop {
     private int qtdHoras;
 
     public Hotel(int codigo, Tamanho tamanhoAnimal, int qtdHoras) {
@@ -20,7 +20,7 @@ public class Hotel extends ServicosPetShop{
     }
 
     public String descricao() {
-        return super.getData() + " | Serviço de Hotel - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " durante " + qtdHoras + " horas  - R$: " + calculaPreco();
+        return super.getData() + " | Hotel - Código:  " + super.getCodigo() + " | Tamanho: " + super.getTamanhoAnimal() + " durante " + qtdHoras + " horas  - R$: " + calculaPreco();
     }
 
     public int getQtdHoras() {
