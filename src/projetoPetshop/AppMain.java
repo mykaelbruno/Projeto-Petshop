@@ -42,6 +42,7 @@ public class AppMain {
         }
         System.out.println("Petshop fechado!");
         System.out.println(petshop.ListaServicos());
+        System.out.println("Total recebido com serviços do dia: " + petshop.calculaValorArrecadado());
     }
 
     private static int menuPrincipal() {

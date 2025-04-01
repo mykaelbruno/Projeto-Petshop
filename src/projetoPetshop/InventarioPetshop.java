@@ -10,7 +10,7 @@ public class InventarioPetshop {
         servicos.add(servico);
     }
 
-    public double calculaPreco() {
+    public double calculaValorArrecadado() {
         double vTotal = 0;
         for (ServicosPetshopIF servico : servicos) {
             vTotal += servico.calculaPreco();
